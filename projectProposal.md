@@ -1,4 +1,4 @@
-# Project 2 Proposal 
+<!-- # Project 2 Proposal 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description 
@@ -103,4 +103,4 @@ MIT License
 
 upload an image -> (S3 Buckets on AWS -> API)
 Store the Image URL in Varchar field
-
+ -->
