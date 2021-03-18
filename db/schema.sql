@@ -1,6 +1,6 @@
 -- DROP DATABASE
-DROP DATABASE IF EXISTS tech_blog_db;
+DROP DATABASE IF EXISTS pedagogue_db;
 
 -- CREATE DATABASE
-CREATE DATABASE tech_blog_db;
+CREATE DATABASE pedagogue_db;
 
