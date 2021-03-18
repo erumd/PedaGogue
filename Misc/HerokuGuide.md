@@ -91,7 +91,7 @@ If you haven't run into any errors at this point, you should be able to proceed 
 
 9. Commit any changes you've made up until this point.
 
-10. Run the command `git push heroku main`. A series of processes will be initiated. Once the process is complete, note the name of the app.
+10. Run the command `ggit check`. A series of processes will be initiated. Once the process is complete, note the name of the app.
 
 11. Log in to your [Heroku account](https://id.heroku.com/login). You will see all of your hosted web applications. Click on the app that has the same name as the app you just created.
 
