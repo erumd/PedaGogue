@@ -1,7 +1,10 @@
 # Erum Dhukka
 
 ## Wed Mar 17 2021
+
 Class. Worked as a group to add in files. Prettier adn Linx
+Set up routes. Working on sever
+
 ## Tue Mar 16 2021
 
 Gathered ideas and researched on npm packages, https://knockoutjs.com/, &
