@@ -1,10 +1,8 @@
-const A = require('./A');
-const B = require('./B');
+const User = require('./User');
+const Post = require('./Post');
 
-A.hasMany(B, {
-  onDelete: 'cascade',
-});
+User.hasMany(Post, {});
 
-B.belongsTo(A);
+Post.belongsTo(User);
 
-module.exports = { A, B };
+module.exports = { User, Post };
