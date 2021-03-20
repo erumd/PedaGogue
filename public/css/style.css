@@ -2,3 +2,42 @@
   max-height: max-content;
   color: cadetblue;
 }
+
+.imageCycle1 {
+  background-image: url('https://images.unsplash.com/photo-1616179758526-b00260a6755f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2089&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Photo by <a href="https://unsplash.com/@katie_musial?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Katie Musial</a> on <a href="/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+   */
+}
+.imageCycle2 {
+  background-image: url('https://images.unsplash.com/photo-1616256074022-3a20e0e8bf1b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2002&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Photo by <a href="https://unsplash.com/@fa1998?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">F.A. Grafie</a> on <a href="/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+   */
+}
+
+.imageCycle3 {
+  background-image: url('https://images.unsplash.com/photo-1596808906571-bb7db143fcdf?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2167&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Photo by <a href="https://unsplash.com/@watcharlie?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">watcharlie</a> on <a href="/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+   */
+}
+
+.imageCycle4 {
+  background-image: url('https://images.unsplash.com/photo-1616164426318-22c1dbd6ce53?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Photo by <a href="https://unsplash.com/@haroldwainwright?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Harold Wainwright</a> on <a href="/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+   */
+}
+
+.imageCycle5 {
+  background-image: url('https://images.unsplash.com/photo-1616213320857-b5c3669e472e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Photo by <a href="https://unsplash.com/@haroldwainwright?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Harold Wainwright</a> on <a href="/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+   */
+}
