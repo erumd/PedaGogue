@@ -3,7 +3,7 @@ const { Post, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', async (req, res) => {
-  console.log('HIT THe / user orute time to sign up!!!');
+  console.log('HIT THe / user route time to sign up!!!');
   try {
     const userData = await User.create(req.body);
 
@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
       res.status(200).json(userData);
     });
   } catch (err) {
-    console.log('SOMETHING WRING err', err);
+    console.log('SOMETHING WRONG err', err);
     res.status(400).json(err);
   }
 });
@@ -84,6 +84,7 @@ router.get('/', async (req, res) => {
       logged_in: req.session.logged_in,
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
