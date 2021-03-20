@@ -29,8 +29,20 @@
 
   </head>
 <body>
-    <h1>Does this thing really work?!?!?</h1>
+   <div> 
+     <h1>Does this thing really work?!?!?</h1>
+  </div>
     {{{body}}}
-    
+
+
+    <script>$(document).ready(function(){
+    var classCycle=['imageCycle1','imageCycle2', 'imageCycle3', 'imageCycle4', 'imageCycle5'];
+
+    var randomNumber = Math.floor(Math.random() * classCycle.length);
+    var classToAdd = classCycle[randomNumber];
+
+    $('body').addClass(classToAdd);
+
+}); </script>
 </body>
 </html>
