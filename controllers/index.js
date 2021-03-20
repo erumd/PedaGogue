@@ -8,6 +8,8 @@ const userRoutes = require('./api./userRoutes.js');
 router.use('/', apiRoutes);
 router.use('/', userRoutes);
 
-router.get('/', (req, res) => res.send('Pedagogue Under Construction'));
+router.get('/', (req, res) =>
+  res.send('Pedagogue Under Construction. Trying to set up Routes ')
+);
 
 module.exports = router;
