@@ -1,5 +1,21 @@
 # Erum Dhukka
 
+## Monday March 22, 2021
+
+Worked on redirecting user to homepage after login. Routes and login
+
+## Sat March 20 2021
+
+As a group got routers to work, got login and signup page to work.
+
+## Fri March 19 2021
+
+Read up on socketio for chat feature.
+
+## Thu Mar 18 2021
+
+Worked on HW
+
 ## Wed Mar 17 2021
 
 Class. Worked as a group to add in files. Prettier and Linx
