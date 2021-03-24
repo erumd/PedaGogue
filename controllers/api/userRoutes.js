@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User } = require('../../models');
+const { Post, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', async (req, res) => {
@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.post('/login', async (req, res) => {
+router.post('/login/', async (req, res) => {
   try {
     const userData = await User.findOne({
       where: { username: req.body.username },
@@ -120,4 +120,35 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.get('/topicList', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.render('topicList');
+    return;
+  }
+  res.redirect('/login');
+});
+
+router.get('/topic/:name/:id', (req, res) => {
+  console.log('time to get get the topic and comments!!', req.params);
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    Comment.findAll({
+      where: {
+        topic_id: parseInt(req.params.id),
+      },
+    }).then(function (data) {
+      console.log('Data!!!!', data);
+      var hbsObj = {
+        title: req.params.name,
+        comments: data.map((comment) => comment.toJSON()),
+      };
+
+      res.render('topic', hbsObj);
+    });
+
+    return;
+  }
+  // res.render('login');
+});
 module.exports = router;

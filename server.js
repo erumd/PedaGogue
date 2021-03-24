@@ -10,6 +10,8 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+var db = require('./models/index');
+
 // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create();
 
@@ -36,5 +38,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
+  // db.Comment.create({ body: ' TES TES TES ', topic_id: 1 });
   app.listen(PORT, () => console.log(`Now listening ${PORT}`));
 });
