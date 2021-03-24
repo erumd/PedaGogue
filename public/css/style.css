@@ -1,8 +1,8 @@
-.card-body {
-  max-height: max-content;
-  color: cadetblue;
+.card,
+header {
+  background-color: rgba(210, 207, 207, 0.49);
+  margin-bottom: 2rem;
 }
-
 .imageCycle1 {
   background-image: url('https://project2ejmq.s3.us-east-2.amazonaws.com/f-a-grafie-crsXk59cIsk-unsplash.jpg');
   background-repeat: no-repeat;

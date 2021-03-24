@@ -1,5 +1,10 @@
-<h1> {{title}} coming soon!!</h1>
+<h1 style="text-align: center"> {{title}} coming soon!!</h1>
 
 {{#each comments}}
+<div class="card">
     <h1> {{this.body}}</h1>
+    <p>{{createdAt}}</p>
+     {{!-- TODO: Look at the activity that had the time formatted - format time -- --}}
+
+</div>
 {{/each}}
