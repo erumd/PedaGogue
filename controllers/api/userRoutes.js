@@ -64,7 +64,7 @@ router.post('/logout', (req, res) => {
   }
 });
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     // Get all sessions and JOIN with user data
     const pData = await Post.findAll({
