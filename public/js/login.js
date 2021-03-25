@@ -12,7 +12,8 @@ const loginFormHandler = async (event) => {
   if (username && email && password) {
     console.log('example, getting login');
     // Send a POST request to the API endpoint
-    const response = await fetch('/users/login', {
+
+    const response = await fetch('/users/login', { 
       method: 'POST',
       body: JSON.stringify({ username, email, password }),
       headers: { 'Content-Type': 'application/json' },
@@ -20,6 +21,7 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       // If successful, redirect the browser to the profile page
+
       document.location.replace('/topicList');
     } else {
       alert(response.statusText);
