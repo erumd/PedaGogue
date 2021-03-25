@@ -1,4 +1,4 @@
-console.log('Hello World');
+// console.log('Hello World');
 
 const loginFormHandler = async (event) => {
   console.log('login form handler ran');
@@ -6,16 +6,15 @@ const loginFormHandler = async (event) => {
 
   // Collect values from the login form
   const username = document.querySelector('#username-login').value.trim();
-  const email = document.querySelector('#email-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
 
-  if (username && email && password) {
+  if (username && password) {
     console.log('example, getting login');
     // Send a POST request to the API endpoint
 
-    const response = await fetch('/users/login', { 
+    const response = await fetch('/users/login', {
       method: 'POST',
-      body: JSON.stringify({ username, email, password }),
+      body: JSON.stringify({ username, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
@@ -64,10 +63,10 @@ const signupFormHandler = async (event) => {
 
 // added event listerner to button not form
 
-console.log(document.querySelector('.login-button'));
+console.log(document.querySelector('.login-form'));
 document
-  .querySelector('.login-button')
-  .addEventListener('click', loginFormHandler);
+  .querySelector('.login-form')
+  .addEventListener('submit', loginFormHandler);
 
 document
   .querySelector('.signup-form')
