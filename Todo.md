@@ -12,6 +12,6 @@ Things to To Do
 
 6. Add images.
 
-7. Hover over image
+7. Hover over image comment
 
 8.
