@@ -1,20 +1,8 @@
 <div class="row">
-  {{#if logged_in}}
-  <a href="/topicList">
-    <button class="btn btn-success" id="topiclist">Topic List</button></a>
-  {{else}}
-  <a href="/login">Login or Sign Up</a>
-  {{/if}}
-</div>
-
-
-<div class="row">
   <div class="col-auto">
     <h2>Welcome, {{name}}!</h2>
   </div>
 </div>
-
-
 
 <div class="row mt-4">
   <div class="col-md-6">
@@ -28,14 +16,14 @@
       <div class="form-group">
         <label for="project-funding">Post Number:</label>
         <input class="form-input" type="number" id="project-funding" name="project-funding" />
-         <select class="form-control" id="exampleFormControlSelect1">
-            <option>STEM</option>
-            <option>ELA</option>
-            <option>Social Studies</option>
-            <option>Classroom Management</option>
-            <option>Electives</option>
-            <option>Free Resources</option>
-            <option>Parent Communication</option>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>STEM</option>
+          <option>ELA</option>
+          <option>Social Studies</option>
+          <option>Classroom Management</option>
+          <option>Electives</option>
+          <option>Free Resources</option>
+          <option>Parent Communication</option>
         </select>
       </div>
       <div class="form-group">
