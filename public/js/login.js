@@ -57,12 +57,6 @@ const signupFormHandler = async (event) => {
   }
 };
 
-// document
-//   .querySelector('.login-form')
-//   .addEventListener('submit', loginFormHandler);
-
-// added event listerner to button not form
-
 console.log(document.querySelector('.login-form'));
 document
   .querySelector('.login-form')
@@ -71,3 +65,42 @@ document
 document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
+
+// Script for the topic pages
+$('#createPost').on('click', function () {
+  fetch('/topics', {
+    method: 'POST',
+    body: JSON.stringify({
+      title: $('#postName').val(),
+      body: $('#postDesc').val(),
+    }),
+    headers: { 'Content-Type': 'application/json' },
+  }).then(function () {
+    console.log('.then of fetch!!');
+  });
+});
+
+const makeAPost = async (event) => {
+  event.preventDefault();
+
+  const postName = document.querySelector('#postName').value.trim();
+  const postDesc = document.querySelector('#postDesc').value.trim();
+
+  if (postName && postDesc) {
+    const response = await fetch('/Topics', {
+      method: 'POST',
+      body: JSON.stringify({
+        title: $('#postName').val(),
+        body: $('#postDesc').val(),
+      }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      // document.location.replace('/profile');
+      console.log("it's ok");
+    } else {
+      alert(response.statusText);
+    }
+  }
+};

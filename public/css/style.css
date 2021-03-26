@@ -9,7 +9,11 @@ header,
   background-color: rgba(144, 142, 142, 0.8);
   margin-bottom: 2rem;
 }
-
+.card {
+  margin: 2rem;
+  max-width: 18rem;
+  min-width: 18rem;
+}
 .card-body {
   background-color: rgba(114, 105, 237, 0.8);
 }
