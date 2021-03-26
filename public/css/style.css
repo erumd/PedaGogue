@@ -176,6 +176,7 @@ h2 {
   background-image: url('https://images.unsplash.com/photo-1616197127646-054bff213633?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTB8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60');
   background-repeat: no-repeat;
   background-size: cover;
+  alt: 'https://unsplash.com/@susan_wilkinson';
   /* https://unsplash.com/@susan_wilkinson
    */
 }
@@ -183,6 +184,7 @@ h2 {
   background-image: url('https://images.unsplash.com/photo-1553912545-a3f690923c32?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1334&q=80');
   background-repeat: no-repeat;
   background-size: cover;
+  alt: 'https://unsplash.com/@matthardy';
   /* https://unsplash.com/@matthardy
    */
 }
@@ -190,6 +192,7 @@ h2 {
   background-image: url('https://images.unsplash.com/photo-1615934990448-2f9342d961b9?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MzF8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60');
   background-repeat: no-repeat;
   background-size: cover;
+  alt: 'https://unsplash.com/@susan_wilkinson';
   /* https://unsplash.com/@susan_wilkinson
    */
 }
@@ -197,6 +200,7 @@ h2 {
   background-image: url('https://images.unsplash.com/photo-1615851907908-a51ca698c7e7?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NDV8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60');
   background-repeat: no-repeat;
   background-size: cover;
+  alt: 'https://unsplash.com/@susan_wilkinson';
   /* https://unsplash.com/@susan_wilkinson
    */
 }
@@ -204,8 +208,20 @@ h2 {
   background-image: url('https://images.unsplash.com/photo-1616273695000-ec14158cf3f1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1698&q=80');
   background-repeat: no-repeat;
   background-size: cover;
+  alt: 'https://unsplash.com/@brewbottle';
   /* https://unsplash.com/@brewbottle
    */
+}
+
+/* HOVER IMAGE CREDIT  */
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* HOVER IMAGE CREDIT  */
