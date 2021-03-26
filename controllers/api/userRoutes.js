@@ -194,8 +194,28 @@ router.get('/topic/:name/:id', (req, res) => {
 
 // router.post('/profile');
 
-router.get('/comments', (req, res) => {
-  console.log('What am I doing? - does this fix that error', req.body);
+// router.get('/comments', (req, res) => {
+//   console.log('What am I doing? - does this fix that error', req.body);
+// });
+
+router.post('/comments', withAuth, async (req, res) => {
+  console.log('post for profile %%%%%%%%%%%%%%', req.body);
+  try {
+    const commentWeMade = await Comment.create({
+      body: req.body.postDesc,
+      topic_id: req.body.topicId,
+    });
+
+    // console.log('this is the data', postData);
+
+    // res.render(postData);
+    res.status(200).json({ test: 'testingg' });
+  } catch (err) {
+    console.log('SOMETHING WRONG err', err);
+    res.status(400).json(err);
+  }
 });
+
+// New comment delte route!! routere.delete
 
 module.exports = router;

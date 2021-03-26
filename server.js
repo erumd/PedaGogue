@@ -38,6 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  // db.Comment.create({ body: ' TES TES TES ', topic_id: 1 });
+  db.Topic.create({ title: 'Parent Communication' });
+
   app.listen(PORT, () => console.log(`Now listening ${PORT}`));
 });
