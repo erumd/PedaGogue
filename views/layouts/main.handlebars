@@ -25,8 +25,8 @@
       <h1 class="display-4 m-5" style="text-align: center" id="welcome">Welcome to PedaGOgue</h1>
       {{#if logged_in}}
       <a href="/profile" class="btn btn-lg active" id="profileBTN" role="button" aria-pressed="true">PROFILE</a>
-      <a href="/topiclist" class="btn btn-lg active" id="topicListBTN" role="button" aria-pressed="true">Topic List</a>
-      <a href="#" class="btn btn-lg active no-button" role="button" aria-pressed="true" id="logout">Logout</a>
+      <a href="/topicList" class="btn btn-lg active" id="topicListBTN" role="button" aria-pressed="true">Topic List</a>
+      <a href="" class="btn btn-lg active no-button" role="button" aria-pressed="true" id="logout">Logout</a>
       {{else}}
       <a class="nav-link" href="/login">login</a>
       {{/if}}
@@ -47,7 +47,7 @@
   <script>
 
     $(document).ready(function () {
-    var classCycle = ['imageCycle1', 'imageCycle2', 'imageCycle3', 'imageCycle4', 'imageCycle5','imageCycle6', 'imageCycle7', 'imageCycle8', 'imageCycle9', 'imageCycle10', 'imageCycle11'];
+    var classCycle = ['imageCycle1', 'imageCycle2', 'imageCycle3', 'imageCycle4', 'imageCycle5','imageCycle6', 'imageCycle7', 'imageCycle8', 'imageCycle9', 'imageCycle10', 'imageCycle11',, 'imageCycle12', 'imageCycle13', 'imageCycle14', 'imageCycle15', 'imageCycle16', 'imageCycle17', 'imageCycle18', 'imageCycle19', 'imageCycle20'];
 
       var randomNumber = Math.floor(Math.random() * classCycle.length);
       var classToAdd = classCycle[randomNumber];
