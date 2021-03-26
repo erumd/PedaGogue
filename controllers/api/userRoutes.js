@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Topic, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   console.log('HIT THe / user route time to sign up!!!');
   try {
     const userData = await User.create(req.body);
@@ -18,6 +18,43 @@ router.post('/', async (req, res) => {
   } catch (err) {
     console.log('SOMETHING WRONG err', err);
     res.status(400).json(err);
+  }
+});
+
+// router.post('/profile', withAuth, async (req, res) => {
+//   console.log('post for profile');
+//   try {
+//     const postData = await Topic.create(req.body);
+
+//     req.body.title = postData.title;
+//     req.body.body = postData.body;
+//     console.log('this is the data', postData);
+
+//     // res.render(postData);
+//     res.status(200).json(postData);
+//   } catch (err) {
+//     console.log('SOMETHING WRONG err', err);
+//     res.status(400).json(err);
+//   }
+// });
+
+// TRYING PROJECT ROUTE
+router.get('/profile', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.userId, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Topic }],
+    });
+
+    const user = userData.get({ plain: true });
+    console.log('This is User Data', userData);
+    res.render('profile', {
+      ...user,
+      logged_in: true,
+    });
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
@@ -131,6 +168,7 @@ router.get('/topicList', (req, res) => {
   res.redirect('/login');
 });
 
+// for all topics
 router.get('/topic/:name/:id', (req, res) => {
   console.log('time to get get the topic and comments!!', req.params);
   // If the user is already logged in, redirect the request to another route
@@ -153,4 +191,7 @@ router.get('/topic/:name/:id', (req, res) => {
   }
   // res.render('login');
 });
+
+router.post('/profile');
+
 module.exports = router;
