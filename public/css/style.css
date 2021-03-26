@@ -1,7 +1,21 @@
-.card,
-header {
-  background-color: rgba(210, 207, 207, 0.49);
+body {
+  font-family: 'Cairo', sans-serif;
+  text-shadow: 0 1px 0 black;
+  color: ghostwhite;
+}
+
+header,
+.card {
+  background-color: rgba(144, 142, 142, 0.8);
   margin-bottom: 2rem;
+}
+
+.card-body {
+  background-color: rgba(114, 105, 237, 0.8);
+}
+
+.btn-secondary {
+  justify-content: center;
 }
 
 label {
@@ -16,17 +30,17 @@ label {
 h2 {
   color: cyan;
   font-weight: 600;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
+  /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000; */
 }
 
 #welcome {
-  color: limegreen;
+  color: ghostwhite;
   font-style: initial;
   font-weight: 800;
   font-style: italic;
-  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
-    2px 2px 0 #000;
+  /* text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000; */
 }
 
 #profileBTN {
