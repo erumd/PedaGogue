@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Topic, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
   console.log('HIT THe / user route time to sign up!!!');
   try {
     const userData = await User.create(req.body);
@@ -39,26 +39,26 @@ router.post('/', withAuth, async (req, res) => {
 // });
 
 // TRYING PROJECT ROUTE
-router.get('/profile', withAuth, async (req, res) => {
-  try {
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.userId, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Topic }],
-    });
+// router.get('/profile', withAuth, async (req, res) => {
+//   try {
+//     // Find the logged in user based on the session ID
+//     const userData = await User.findByPk(req.session.userId, {
+//       attributes: { exclude: ['password'] },
+//       include: [{ model: Topic }],
+//     });
 
-    const user = userData.get({ plain: true });
-    console.log('This is User Data', userData);
-    res.render('profile', {
-      ...user,
-      logged_in: true,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     const user = userData.get({ plain: true });
+//     console.log('This is User Data', userData);
+//     res.render('profile', {
+//       ...user,
+//       logged_in: true,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
-router.post('/login/', async (req, res) => {
+router.post('/login/', withAuth, async (req, res) => {
   try {
     const userData = await User.findOne({
       where: { username: req.body.username },
@@ -66,7 +66,7 @@ router.post('/login/', async (req, res) => {
 
     if (!userData) {
       res
-        .status(400)
+        .status(409)
         .json({ message: 'Incorrect username or password, please try again' });
       return;
     }
@@ -75,7 +75,7 @@ router.post('/login/', async (req, res) => {
 
     if (!validPassword) {
       res
-        .status(400)
+        .status(409)
         .json({ message: 'Incorrect username or password, please try again' });
       return;
     }
@@ -192,6 +192,10 @@ router.get('/topic/:name/:id', (req, res) => {
   // res.render('login');
 });
 
-router.post('/profile');
+// router.post('/profile');
+
+router.get('/comments', (req, res) => {
+  console.log('What am I doing? - does this fix that error', req.body);
+});
 
 module.exports = router;

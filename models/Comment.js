@@ -21,6 +21,7 @@ Comment.init(
 
   {
     sequelize,
+    modelName: 'comment',
   }
 );
 
