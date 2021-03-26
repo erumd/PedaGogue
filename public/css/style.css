@@ -3,6 +3,57 @@ header {
   background-color: rgba(210, 207, 207, 0.49);
   margin-bottom: 2rem;
 }
+
+label {
+  font-size: 20px;
+  color: yellow;
+  /* text-shadow: -.5px -.5px 0 yellow,
+  .5px -.5px 0 yellow,
+  -.5px .5px 0 yellow,
+  .5px .5px 0 yellow; */
+}
+
+h2 {
+color: cyan;
+font-weight: 600;
+text-shadow: -1px -1px 0 #000,
+1px -1px 0 #000,
+-1px 1px 0 #000,
+1px 1px 0 #000;
+}
+
+#welcome {
+  color: limegreen;
+  font-style: initial;
+  font-weight: 800;
+  font-style: italic;
+  text-shadow: -2px -2px 0 #000,
+  2px -2px 0 #000,
+  -2px 2px 0 #000,
+  2px 2px 0 #000;
+}
+
+#profileBTN {
+  background-color: grey;
+  color: green;
+  font-style: oblique;
+  font-weight: 800;
+}
+
+#topicListBTN {
+  background-color: grey;
+  color: yellow;
+  font-style: oblique;
+  font-weight: 800;
+}
+
+#logout {
+  background-color: grey;
+  color: red;
+  font-style: oblique;
+  font-weight: 800;
+}
+
 .imageCycle1 {
   background-image: url('https://project2ejmq.s3.us-east-2.amazonaws.com/f-a-grafie-crsXk59cIsk-unsplash.jpg');
   background-repeat: no-repeat;

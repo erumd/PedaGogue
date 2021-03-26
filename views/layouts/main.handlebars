@@ -18,35 +18,45 @@
     crossorigin="anonymous"></script>
 
 </head>
-<header class="Jumbotron">
-  <h1 class="display-4 m-5" style="text-align: center">Welcome to PedaGOgue</h1>
-</header>
 
-<div class="card">
-  <main class="container">
-    {{{ body }}}
+<body>
+  <div class="flex-column justify-space-around">
+    <header class="Jumbotron">
+      <h1 class="display-4 m-5" style="text-align: center" id="welcome">Welcome to PedaGOgue</h1>
+      {{#if logged_in}}
+      <a href="/profile" class="btn btn-lg active" id="profileBTN" role="button" aria-pressed="true">PROFILE</a>
+      <a href="/topiclist" class="btn btn-lg active" id="topicListBTN" role="button" aria-pressed="true">Topic List</a>
+      <a href="#" class="btn btn-lg active no-button" role="button" aria-pressed="true" id="logout">Logout</a>
+      {{else}}
+      <a class="nav-link" href="/login">login</a>
+      {{/if}}
 
-  </main>
-</div>
-{{#if logged_in}}
-<script src="/js/logout.js"></script>
-{{/if}}
+    </header>
 
+    <div class="card">
+      <main class="container">
+        {{{ body }}}
 
+      </main>
+    </div>
+  </div>
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 
-<script>
+  <script>
 
-  $(document).ready(function () {
+    $(document).ready(function () {
     var classCycle = ['imageCycle1', 'imageCycle2', 'imageCycle3', 'imageCycle4', 'imageCycle5','imageCycle6', 'imageCycle7', 'imageCycle8', 'imageCycle9', 'imageCycle10', 'imageCycle11'];
 
-    var randomNumber = Math.floor(Math.random() * classCycle.length);
-    var classToAdd = classCycle[randomNumber];
+      var randomNumber = Math.floor(Math.random() * classCycle.length);
+      var classToAdd = classCycle[randomNumber];
 
-    $('body').addClass(classToAdd);
+      $('body').addClass(classToAdd);
 
-  });
+    });
 
-</script>
+  </script>
 </body>
 
 </html>
