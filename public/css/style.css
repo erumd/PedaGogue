@@ -94,22 +94,74 @@ text-shadow: -1px -1px 0 #000,
 }
 
 .imageCycle6 {
-  background-image: url('https://unsplash.com/photos/NPct-Mxw-64?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink');
+  background-image: url('https://images.unsplash.com/photo-1616604745302-60a195c7061a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2301&q=80');
   background-repeat: no-repeat;
   background-size: cover;
+  /* photo credit: www.unsplash.com */
 }
 
 .imageCycle7 {
-  background-image: url('https://unsplash.com/photos/JDAwS0pwCtY');
+  background-image: url('https://images.unsplash.com/photo-1616428721071-ea98d361eb6b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2500&q=80');
   background-repeat: no-repeat;
   background-size: cover;
-  /* Photo by <a href="https://unsplash.com/@sagedg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sage Galbreath</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  /* photo credit: www.unsplash.com */
+}
+.imageCycle8 {
+  background-image: url('https://images.unsplash.com/photo-1547019431-3363db3ddb4b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* photo credit: www.unsplash.com */
+}
+.imageCycle9 {
+  background-image: url('https://images.unsplash.com/photo-1581422521308-126e2f139ea7?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDU0fDZzTVZqVExTa2VRfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* photo credit: www.unsplash.com */
+}
+.imageCycle10 {
+  background-image: url('https://images.unsplash.com/photo-1582721534293-c005ee2f09d5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Photo by <a href="https://unsplash.com/@usgs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">USGS</a> on <a href="https://unsplash.com/t/nature?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+   */
+}
+.imageCycle11 {
+  background-image: url(' https://images.unsplash.com/photo-1515681300827-de75e75e8081?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDY4fDZzTVZqVExTa2VRfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Photo by <a href="https://unsplash.com/@usgs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">USGS</a> on <a href="https://unsplash.com/t/nature?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
    */
 }
 
-.imageCycle8 {
-  background-image: url('https://images.unsplash.com/photo-1561748801-2444e157e399?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1535&q=80');
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* Photo by <a href="https://unsplash.com/@yusufevli?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Yusuf Evli</a> on <a href="https://unsplash.com/t/wallpapers?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
+
+/* HOVER IMAGE CREDIT  */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
