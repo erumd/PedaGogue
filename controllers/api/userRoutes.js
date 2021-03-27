@@ -21,43 +21,6 @@ router.post('/', async (req, res) => {
   }
 });
 
-// router.post('/profile', withAuth, async (req, res) => {
-//   console.log('post for profile');
-//   try {
-//     const postData = await Topic.create(req.body);
-
-//     req.body.title = postData.title;
-//     req.body.body = postData.body;
-//     console.log('this is the data', postData);
-
-//     // res.render(postData);
-//     res.status(200).json(postData);
-//   } catch (err) {
-//     console.log('SOMETHING WRONG err', err);
-//     res.status(400).json(err);
-//   }
-// });
-
-// TRYING PROJECT ROUTE
-// router.get('/profile', withAuth, async (req, res) => {
-//   try {
-//     // Find the logged in user based on the session ID
-//     const userData = await User.findByPk(req.session.userId, {
-//       attributes: { exclude: ['password'] },
-//       include: [{ model: Topic }],
-//     });
-
-//     const user = userData.get({ plain: true });
-//     console.log('This is User Data', userData);
-//     res.render('profile', {
-//       ...user,
-//       logged_in: true,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({
@@ -192,12 +155,6 @@ router.get('/topic/:name/:id', (req, res) => {
   // res.render('login');
 });
 
-// router.post('/profile');
-
-// router.get('/comments', (req, res) => {
-//   console.log('What am I doing? - does this fix that error', req.body);
-// });
-
 router.post('/comments', withAuth, async (req, res) => {
   console.log('post for profile %%%%%%%%%%%%%%', req.body);
   try {
@@ -238,3 +195,4 @@ router.delete('/:id', withAuth, async (req, res) => {
 });
 
 module.exports = router;
+
