@@ -10,11 +10,27 @@ As a group of developers with strong ties to education, we chose to create an ap
 
 If your README is very long, add a table of contents to make it easy for users to find what they need.
 
+- [Deployment](#deployment)
+- [Installation](#installation)
 - [User Story](#userStory)
 - [Credits](#credits)
 - [License](#license)
+- [Resources](#resources)
+
+## Deployment
+
+https://github.com/erumd/Project2-repository
+
+Heroku Deployment: https://pedagu-gu.herokuapp.com/
 
 ## Installation
+
+1. After cloning repo to your device in terminal run "npm install"
+2. Open up SQL Workbench and run the db files pedagogue_db.sql.
+3. In .envEXAMPLE file set up your connection (database, username, password).
+4. Rename .envEXAMPLE to ".env"
+5. Open terminal and locate the folder
+6. In terminal command line run "npm start"
 
 ## User Story
 
