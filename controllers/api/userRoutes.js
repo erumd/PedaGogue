@@ -58,7 +58,7 @@ router.post("/", async (req, res) => {
 //   }
 // });
 
-router.post("/login/", withAuth, async (req, res) => {
+router.post("/login", async (req, res) => {
 	try {
 		const userData = await User.findOne({
 			where: { username: req.body.username },
@@ -79,7 +79,7 @@ router.post("/login/", withAuth, async (req, res) => {
 			});
 			return;
 		}
-
+		console.log(userData);
 		req.session.save(() => {
 			req.session.userId = userData.id;
 			req.session.logged_in = true;
@@ -159,6 +159,7 @@ router.get("/login", (req, res) => {
 
 router.get("/topicList", (req, res) => {
 	// If the user is already logged in, redirect the request to another route
+	console.log(req.session);
 	if (req.session.logged_in) {
 		res.render("topicList", {
 			logged_in: true,
