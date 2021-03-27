@@ -133,7 +133,7 @@ router.get('/topicList', (req, res) => {
 });
 
 // for all topics
-router.get('/topic/:name/:id', (req, res) => {
+router.get('/topic/:name/:id', withAuth, (req, res) => {
   console.log('time to get get the topic and comments!!', req.params);
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
@@ -146,6 +146,7 @@ router.get('/topic/:name/:id', (req, res) => {
       var hbsObj = {
         title: req.params.name,
         comments: data.map((comment) => comment.toJSON()),
+        logged_in: req.session.logged_in,
       };
 
       res.render('topic', hbsObj);
