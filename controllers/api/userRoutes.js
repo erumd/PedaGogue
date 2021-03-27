@@ -217,5 +217,22 @@ router.post('/comments', withAuth, async (req, res) => {
 });
 
 // New comment delte route!! routere.delete
+router.delete('/:id', withAuth, async (req, res) => {
+  try {
+    const commentDelete = await Comment.destroy({
+      body: req.body.postDesc,
+      topic_id: req.body.topicId,
+    });
+
+    if (!commentDelete) {
+      res.status(404).json({ message: 'No project found with this id!' });
+      return;
+    }
+
+    res.status(200).json(commentDelete);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;

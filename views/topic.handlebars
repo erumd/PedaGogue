@@ -1,14 +1,16 @@
-<h1 style="text-align: center"> {{title}} coming soon!!</h1>
+<h1 style="text-align: center"> </h1>
 
 {{#each comments}}
 <div class="card">
-    <h1> {{this.body}}</h1>
+
+    <h2> {{this.name}}</h1>
+    <h4> {{this.body}}</h4>
     <p>{{createdAt}}</p>
     <button class='delete-btn' name={{this.id}}>Delete </button>
      {{!-- TODO: Look at the activity that had the time formatted - format time -- --}}
 </div>
 {{/each}}
-    <button type="button" class="btn btn-info" id="newPost">Add a Post</button>
+    {{!-- <button type="button" class="btn btn-info" id="newPost">Add a Post</button> --}}
 
     
 
