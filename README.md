@@ -21,7 +21,8 @@ If your README is very long, add a table of contents to make it easy for users t
 
 https://github.com/erumd/Project2-repository
 
-Heroku Deployment: https://pedagu-gu.herokuapp.com/
+Heroku Deployment:
+https://pedagu-gu.herokuapp.com/profile
 
 ## Installation
 
