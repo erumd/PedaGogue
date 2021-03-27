@@ -21,17 +21,22 @@ const loginFormHandler = async (event) => {
 		if (response.ok) {
 			// If successful, redirect the browser to the profile page
 
-			document.location.replace("/topicList");
-		} else {
-			alert(response.statusText);
-		}
-	} else {
-		console.log(
-			"missing information",
-			`Username:${username} Email${email} pass:${password}`
-		);
-	}
-	return false;
+
+    if (response.ok) {
+      // If successful, redirect the browser to the profile page
+
+      document.location.replace('/topicList');
+    } else {
+      alert(response.statusText);
+    }
+  } else {
+    console.log(
+      'missing information',
+      `Username:${username} Email${email} pass:${password}`
+    );
+  }
+  return false;
+
 };
 
 const signupFormHandler = async (event) => {
@@ -67,16 +72,4 @@ document
 	.querySelector(".signup-form")
 	.addEventListener("submit", signupFormHandler);
 
-// // Script for the topic pages
-// $('#createPost').on('click', function () {
-//   fetch('/topics', {
-//     method: 'POST',
-//     body: JSON.stringify({
-//       title: $('#postName').val(),
-//       body: $('#postDesc').val(),
-//     }),
-//     headers: { 'Content-Type': 'application/json' },
-//   }).then(function () {
-//     console.log('.then of fetch!!');
-//   });
-// });
+
