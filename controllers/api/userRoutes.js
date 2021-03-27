@@ -222,7 +222,6 @@ router.delete('/:id', withAuth, async (req, res) => {
     const commentData = await Comment.destroy({
       where: {
         id: req.params.id,
-        userId: req.session.userId,
       },
     });
 
@@ -233,6 +232,7 @@ router.delete('/:id', withAuth, async (req, res) => {
 
     res.status(200).json(commentData);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
