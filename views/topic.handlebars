@@ -21,4 +21,26 @@
         $('.delete-btn').on('click', function() {
             console.log('ID of comment to delte!! send to backend route!! so it cna delte!!', $(this).attr('name'))
         })
+
+        const delButtonHandler = async (event) => {
+            if (event.target.hasAttribute('name')) {
+                const id = event.target.getAttribute('name');
+
+                const response = await fetch(`/user${id}`, {
+                method: 'DELETE',
+                });
+
+                if (response.ok) {
+                document.location.replace('/topic');
+                } else {
+                alert('Failed to delete project');
+                }
+            }
+            };
+
+document
+  .querySelector('.project-list')
+  .addEventListener('click', delButtonHandler);
+
+        
     </script>
