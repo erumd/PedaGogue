@@ -1,5 +1,3 @@
-// console.log('Hello World');
-
 const loginFormHandler = async (event) => {
   console.log('login form handler ran');
   event.preventDefault();
@@ -17,7 +15,7 @@ const loginFormHandler = async (event) => {
       body: JSON.stringify({ username, password }),
       headers: { 'Content-Type': 'application/json' },
     });
-
+    console.log(response);
     if (response.ok) {
       // If successful, redirect the browser to the profile page
 

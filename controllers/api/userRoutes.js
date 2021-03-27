@@ -122,6 +122,7 @@ router.get('/login', (req, res) => {
 
 router.get('/topicList', (req, res) => {
   // If the user is already logged in, redirect the request to another route
+  console.log(req.session);
   if (req.session.logged_in) {
     res.render('topicList', {
       logged_in: true,
@@ -152,7 +153,6 @@ router.get('/topic/:name/:id', (req, res) => {
 
     return;
   }
-  // res.render('login');
 });
 
 router.post('/comments', withAuth, async (req, res) => {
@@ -195,4 +195,3 @@ router.delete('/:id', withAuth, async (req, res) => {
 });
 
 module.exports = router;
-

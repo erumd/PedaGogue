@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Staatliches&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Staatliches&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css" />
   <title>Welcome to PedaGOgue</title>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -52,16 +52,17 @@
   <script>
 
 
-      $(document).ready(function () {
-      var classCycle = ['imageCycle1','imageCycle2', 'imageCycle3', 'imageCycle4', 'imageCycle5','imageCycle6', 'imageCycle7', 'imageCycle8', 'imageCycle9', 'imageCycle10', 'imageCycle11', 'imageCycle12', 'imageCycle13', 'imageCycle14', 'imageCycle15', 'imageCycle16', 'imageCycle17', 'imageCycle18', 'imageCycle19', 'imageCycle20'];
-        var randomNumber = Math.floor(Math.random() * classCycle.length);
-        var classToAdd = classCycle[randomNumber];
-        $('body').addClass(classToAdd);
+    $(document).ready(function () {
+      var classCycle = ['imageCycle1', 'imageCycle2', 'imageCycle3', 'imageCycle4', 'imageCycle5', 'imageCycle6', 'imageCycle7', 'imageCycle8', 'imageCycle9', 'imageCycle10', 'imageCycle11', 'imageCycle12', 'imageCycle13', 'imageCycle14', 'imageCycle15', 'imageCycle16', 'imageCycle17', 'imageCycle18', 'imageCycle19', 'imageCycle20'];
+      var randomNumber = Math.floor(Math.random() * classCycle.length);
+      var classToAdd = classCycle[randomNumber];
+      $('body').addClass(classToAdd);
 
-      });
+    });
 
 
   </script>
+
 </body>
 
 </html>
