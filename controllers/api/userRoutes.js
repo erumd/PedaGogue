@@ -154,7 +154,7 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('topicList');
+  res.render('login');
 });
 
 router.get('/topicList', (req, res) => {
@@ -219,17 +219,19 @@ router.post('/comments', withAuth, async (req, res) => {
 // New comment delte route!! routere.delete
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const commentDelete = await Comment.destroy({
-      body: req.body.postDesc,
-      topic_id: req.body.topicId,
+    const projectData = await Project.destroy({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
     });
 
-    if (!commentDelete) {
+    if (!projectData) {
       res.status(404).json({ message: 'No project found with this id!' });
       return;
     }
 
-    res.status(200).json(commentDelete);
+    res.status(200).json(projectData);
   } catch (err) {
     res.status(500).json(err);
   }
