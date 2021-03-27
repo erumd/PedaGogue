@@ -99,6 +99,12 @@ If you haven't run into any errors at this point, you should be able to proceed 
 
 13. Navigate to that URL in your browser. If all went well, you should see your web application live online!
 
+STEPS TO RUN:
+git add -A
+git commit -m " comment"
+git push origin main
+git push heroku main
+
 ### Troubleshooting
 
 - If your Heroku app fails to deploy, run the command `heroku logs` in your command line

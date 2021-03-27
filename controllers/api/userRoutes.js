@@ -154,7 +154,7 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login');
+  res.render('topicList');
 });
 
 router.get('/topicList', (req, res) => {
