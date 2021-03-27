@@ -219,19 +219,19 @@ router.post('/comments', withAuth, async (req, res) => {
 // New comment delte route!! routere.delete
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const projectData = await Project.destroy({
+    const commentData = await Comment.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
+        userId: req.session.userId,
       },
     });
 
-    if (!projectData) {
-      res.status(404).json({ message: 'No project found with this id!' });
+    if (!commentData) {
+      res.status(404).json();
       return;
     }
 
-    res.status(200).json(projectData);
+    res.status(200).json(commentData);
   } catch (err) {
     res.status(500).json(err);
   }

@@ -16,7 +16,6 @@ Comment.init(
         key: 'id',
       },
     },
-    // },
   },
 
   {
