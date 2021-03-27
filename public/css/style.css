@@ -25,17 +25,11 @@ header,
 label {
   font-size: 20px;
   color: yellow;
-  /* text-shadow: -.5px -.5px 0 yellow,
-  .5px -.5px 0 yellow,
-  -.5px .5px 0 yellow,
-  .5px .5px 0 yellow; */
 }
 
 h2 {
   color: cyan;
   font-weight: 600;
-  /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000; */
 }
 
 #welcome {
@@ -43,8 +37,6 @@ h2 {
   font-style: initial;
   font-weight: 800;
   font-style: italic;
-  /* text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
-    2px 2px 0 #000; */
 }
 
 #profileBTN {

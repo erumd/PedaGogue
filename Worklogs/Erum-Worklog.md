@@ -1,5 +1,16 @@
 # Erum Dhukka
 
+## Saturday March 27, 2021
+Presentation day. Practiced presentations before class. 
+
+## Friday March 26, 2021
+Added Post for each topic. Delete button now working
+
+## Thursday March 26, 2021
+Big merge error. having hard time refershing after 
+
+
+## Tuesday March 23, 2021
 ## Monday March 22, 2021
 
 Worked on redirecting user to homepage after login. Routes and login

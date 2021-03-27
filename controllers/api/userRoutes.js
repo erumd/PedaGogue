@@ -21,44 +21,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// router.post('/profile', withAuth, async (req, res) => {
-//   console.log('post for profile');
-//   try {
-//     const postData = await Topic.create(req.body);
-
-//     req.body.title = postData.title;
-//     req.body.body = postData.body;
-//     console.log('this is the data', postData);
-
-//     // res.render(postData);
-//     res.status(200).json(postData);
-//   } catch (err) {
-//     console.log('SOMETHING WRONG err', err);
-//     res.status(400).json(err);
-//   }
-// });
-
-// TRYING PROJECT ROUTE
-// router.get('/profile', withAuth, async (req, res) => {
-//   try {
-//     // Find the logged in user based on the session ID
-//     const userData = await User.findByPk(req.session.userId, {
-//       attributes: { exclude: ['password'] },
-//       include: [{ model: Topic }],
-//     });
-
-//     const user = userData.get({ plain: true });
-//     console.log('This is User Data', userData);
-//     res.render('profile', {
-//       ...user,
-//       logged_in: true,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
-router.post('/login/', withAuth, async (req, res) => {
+router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({
       where: { username: req.body.username },
@@ -159,6 +122,7 @@ router.get('/login', (req, res) => {
 
 router.get('/topicList', (req, res) => {
   // If the user is already logged in, redirect the request to another route
+  console.log(req.session);
   if (req.session.logged_in) {
     res.render('topicList', {
       logged_in: true,
@@ -169,7 +133,7 @@ router.get('/topicList', (req, res) => {
 });
 
 // for all topics
-router.get('/topic/:name/:id', (req, res) => {
+router.get('/topic/:name/:id', withAuth, (req, res) => {
   console.log('time to get get the topic and comments!!', req.params);
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
@@ -182,6 +146,7 @@ router.get('/topic/:name/:id', (req, res) => {
       var hbsObj = {
         title: req.params.name,
         comments: data.map((comment) => comment.toJSON()),
+        logged_in: req.session.logged_in,
       };
 
       res.render('topic', hbsObj);
@@ -189,14 +154,7 @@ router.get('/topic/:name/:id', (req, res) => {
 
     return;
   }
-  // res.render('login');
 });
-
-// router.post('/profile');
-
-// router.get('/comments', (req, res) => {
-//   console.log('What am I doing? - does this fix that error', req.body);
-// });
 
 router.post('/comments', withAuth, async (req, res) => {
   console.log('post for profile %%%%%%%%%%%%%%', req.body);
@@ -222,7 +180,6 @@ router.delete('/:id', withAuth, async (req, res) => {
     const commentData = await Comment.destroy({
       where: {
         id: req.params.id,
-        userId: req.session.userId,
       },
     });
 
@@ -233,6 +190,7 @@ router.delete('/:id', withAuth, async (req, res) => {
 
     res.status(200).json(commentData);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });

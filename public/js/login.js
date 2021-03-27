@@ -1,5 +1,3 @@
-// console.log('Hello World');
-
 const loginFormHandler = async (event) => {
   console.log('login form handler ran');
   event.preventDefault();
@@ -17,7 +15,7 @@ const loginFormHandler = async (event) => {
       body: JSON.stringify({ username, password }),
       headers: { 'Content-Type': 'application/json' },
     });
-
+    console.log(response);
     if (response.ok) {
       // If successful, redirect the browser to the profile page
 
@@ -31,6 +29,7 @@ const loginFormHandler = async (event) => {
       `Username:${username} Email${email} pass:${password}`
     );
   }
+  return false;
 };
 
 const signupFormHandler = async (event) => {
@@ -65,17 +64,3 @@ document
 document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
-
-// // Script for the topic pages
-// $('#createPost').on('click', function () {
-//   fetch('/topics', {
-//     method: 'POST',
-//     body: JSON.stringify({
-//       title: $('#postName').val(),
-//       body: $('#postDesc').val(),
-//     }),
-//     headers: { 'Content-Type': 'application/json' },
-//   }).then(function () {
-//     console.log('.then of fetch!!');
-//   });
-// });
