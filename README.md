@@ -14,8 +14,8 @@ If your README is very long, add a table of contents to make it easy for users t
 - [Installation](#installation)
 - [User Story](#userStory)
 - [Credits](#credits)
-- [License](#license)
 - [Resources](#resources)
+- [License](#license)
 
 ## Deployment
 
@@ -47,6 +47,10 @@ This project will be completed by
 [Quincy] (https://github.com/Q-Jones92)
 [Michael] (https://github.com/mrllanes)
 
+## Resources
+
+[Random Background](https://stackoverflow.com/questions/18288950/random-fullscreen-background-image-on-browser-refresh)
+
 ## License
 
 MIT License
@@ -72,40 +76,3 @@ MIT License
     SOFTWARE.
 
 ---
-
-## Features
-
-- TBD
-
-## Possible Names
-
-3.) EduKnow
-4.) TeachPad
-5.) Ask & Assist
-8.) Teach-a-Teach
-9.) Teach2Teach
-
-### MVP (Minimum Viable Product)
-
-- Make an account
-- Post
-- Respond
-- Category or Search
-- UI/UX
-- - Socket.io - Websockets / Polling (Live or Instant Chat)
-
-## Stretch Goals
-
-- Socket.io - Websockets / Polling
-- Image Uploads
-- JSON Blob -> Probably a good way to store the screens people are creating
-- Adding Giphy for responses
-- Adding Media
-- Also a padlet for student interaction / Student Functionality
-
-upload an image -> (S3 Buckets on AWS -> API)
-Store the Image URL in Varchar field
-
-## Resources
-
-[Random Background](https://stackoverflow.com/questions/18288950/random-fullscreen-background-image-on-browser-refresh)

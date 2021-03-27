@@ -27,6 +27,7 @@ const makeAPost = async (event) => {
 
   const postName = document.querySelector('#postName').value.trim();
   const postDesc = document.querySelector('#postDesc').value.trim();
+  var postTopic = $('#postTopic').val();
 
   if (postName && postDesc) {
     const response = await fetch('/users/comments', {
@@ -37,7 +38,8 @@ const makeAPost = async (event) => {
 
     if (response.ok) {
       // document.location.replace('/profile');
-      console.log('clicked again?', postDesc);
+      document.location.replace(`/topic/${postTopic}.val())/${topicId}`);
+      console.log('This is sample of redirecting', topicId);
     } else {
       alert(response.statusText);
     }
